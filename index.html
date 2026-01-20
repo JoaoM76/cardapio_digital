@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cardápio virtual</title>
+    <title>lanchonete roberto</title>
     
     <style>
-        /* --- 1. CONFIGURAÇÕES DO FUNDO (O Palco) --- */
+        /* --- 1. CONFIGURAÇÕES DO FUNDO (CORREÇÃO APLICADA AQUI) --- */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
             
-            /* IMAGEM DE FUNDO (Fixa) */
-            /* Dica: Use uma imagem escura para destacar o cardápio branco */
-            background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop'); 
-            background-size: cover;  /* Cobre a tela toda */
-            background-position: center;  /* Centraliza a imagem */
-            background-attachment: fixed; /* O SEGREDO: A imagem não mexe ao rolar */
-            
-            /* Centralizar o "App" na tela do PC */
+            /* --- MUDANÇA 1: Tirei as propriedades de imagem daqui --- */
+            /* O body agora só cuida do alinhamento central */
             display: flex;
             justify-content: center;
-            background-color: #11111144; /* Cor de segurança caso a imagem não carregue */
+            background-color: #111; /* Cor de fundo de segurança */
+            min-height: 100vh; /* Garante altura total para centralizar no PC */
         }
 
-        /* --- 2. O CONTAINER DO APP (O Celular) --- */
+        /* --- MUDANÇA 2: ADICIONEI ESTE BLOCO NOVO --- */
+        /* Isso cria uma camada fixa atrás do site só para a imagem */
+        body::before {
+            content: "";
+            position: fixed; /* O segredo: isso trava a imagem na tela */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Fica atrás do conteúdo */
+            
+            /* Suas propriedades de imagem vieram para cá: */
+            background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            /* background-attachment: fixed; <- NÃO É MAIS NECESSÁRIO AQUI */
+        }
+        /* --------------------------------------------------------- */
+
+
+        /* --- 2. O CONTAINER DO APP (SEU DESIGN MANTIDO) --- */
         .app-container {
             width: 100%;
             max-width: 400px; /* Largura máxima de um celular grande */
@@ -239,7 +254,7 @@
                 </div>
             </article>
 
-<div class="categoria-titulo"> Exemplo de Categoria</div>
+        <div class="categoria-titulo"> exemplo de categoria</div>
              <article class="item-card">
                 <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
@@ -271,5 +286,3 @@
 
 </body>
 </html>
-
-
