@@ -22,7 +22,7 @@
             /* Centralizar o "App" na tela do PC */
             display: flex;
             justify-content: center;
-            background-color: #111; /* Cor de segurança caso a imagem não carregue */
+            background-color: #11111144; /* Cor de segurança caso a imagem não carregue */
         }
 
         /* --- 2. O CONTAINER DO APP (O Celular) --- */
@@ -31,7 +31,7 @@
             max-width: 400px; /* Largura máxima de um celular grande */
             background-color: #f9f9f900;
             min-height: 100vh; /* Garante que vá até o final da tela */
-            box-shadow: 0 0 30px rgba(0,0,0,0.8); /* Sombra forte para destacar do fundo */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Sombra forte para destacar do fundo */
             position: relative;
         }
 
@@ -61,7 +61,9 @@
             height: 200px; /* Altura fixa do banner */
             object-fit: cover; /* Corta a imagem para caber sem esticar */
             display: block;
-            
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 10px;
         }
 
         .header-info {
