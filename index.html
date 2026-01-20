@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo</title>
+    <title>lanchonete roberto</title>
     
     <style>
         /* --- 1. CONFIGURAÇÕES DO FUNDO (O Palco) --- */
@@ -15,7 +15,7 @@
             /* IMAGEM DE FUNDO (Fixa) */
             /* Dica: Use uma imagem escura para destacar o cardápio branco */
             background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1965&auto=format&fit=crop'); 
-            background-size: cover;       /* Cobre a tela toda */
+            background-size: cover;  /* Cobre a tela toda */
             background-position: center;  /* Centraliza a imagem */
             background-attachment: fixed; /* O SEGREDO: A imagem não mexe ao rolar */
             
@@ -28,8 +28,8 @@
         /* --- 2. O CONTAINER DO APP (O Celular) --- */
         .app-container {
             width: 100%;
-            max-width: 450px; /* Largura máxima de um celular grande */
-            background-color: #f9f9f9;
+            max-width: 400px; /* Largura máxima de um celular grande */
+            background-color: #f9f9f900;
             min-height: 100vh; /* Garante que vá até o final da tela */
             box-shadow: 0 0 30px rgba(0,0,0,0.8); /* Sombra forte para destacar do fundo */
             position: relative;
@@ -49,7 +49,7 @@
 
         /* --- 3. CABEÇALHO COM BANNER DE DESIGN --- */
         header {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0);
             text-align: center;
             padding: 0; /* Sem padding para a imagem encostar nas bordas */
             position: relative;
@@ -61,12 +61,15 @@
             height: 200px; /* Altura fixa do banner */
             object-fit: cover; /* Corta a imagem para caber sem esticar */
             display: block;
+            
         }
 
         .header-info {
             padding: 15px;
             background: white;
             border-bottom: 1px dashed #ccc;
+            border-radius: 25px;
+            overflow: hidden;
         }
 
         .header-info h1 { font-size: 1.4rem; margin: 0; color: #333; }
@@ -81,18 +84,24 @@
             color: #d32f2f;
             background: #f9f9f9;
             margin-top: 10px;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 15px;
         }
 
         .item-card {
             display: flex;
-            background: white;
+            background: rgb(255, 255, 255);
             padding: 15px;
             border-bottom: 1px solid #eee; /* Linha divisória sutil */
             gap: 15px;
             transition: background 0.2s;
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 5px;
         }
 
-        .item-card:hover { background-color: #f0f0f0; } /* Efeito ao passar o mouse */
+        .item-card:hover { background-color: #f0f0f079; } /* Efeito ao passar o mouse */
 
         .item-foto {
             width: 90px;
@@ -142,71 +151,108 @@
             <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?q=80&w=1000&auto=format&fit=crop" class="banner-topo" alt="Banner da Loja">
             
             <div class="header-info">
-                <h1>Exemplo</h1>
-                <p>📍 Rua exemplo, 999 • Aberto agora</p>
+                <h1>Exemplo de Categoria</h1>
+                <p>📍 Rua exemplo, 999 • Aberto das 7:00 às 19:00</p>
             </div>
         </header>
 
         <main>
-            <div class="categoria-titulo">🔥 Mais Pedidos</div>
+            <div class="categoria-titulo">Exemplo de Categoria</div>
 
             <article class="item-card">
-                <img src="https://placehold.co/150x150/orange/white?text=Burger" class="item-foto">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
-                    <div class="item-nome">Combo da Casa</div>
-                    <div class="item-desc">Hambúrguer duplo, muito cheddar e bacon crocante.</div>
-                    <div class="item-preco">R$ 32,90</div>
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
                 </div>
             </article>
 
             <article class="item-card">
-                <img src="https://placehold.co/150x150/red/white?text=Fritas" class="item-foto">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
-                    <div class="item-nome">Batata</div>
-                    <div class="item-desc">Porção generosa com cheddar e farofa de bacon.</div>
-                    <div class="item-preco">R$ 18,00</div>
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
                 </div>
             </article>
 
-            <div class="categoria-titulo">🥤 Bebidas</div>
+            <div class="categoria-titulo">Exemplo de Categoria</div>
 
             <article class="item-card">
-                <img src="https://placehold.co/150x150/black/white?text=Refri" class="item-foto">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
-                    <div class="item-nome">Coca-Cola</div>
-                    <div class="item-desc">Garrafa de vidro 290ml.</div>
-                    <div class="item-preco">R$ 5,00</div>
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
                 </div>
             </article>
             
-            <div class="categoria-titulo">🥧 Pastéis</div>
+            <article class="item-card">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
+                <div class="item-info">
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
+                </div>
+            </article>
+
+            <div class="categoria-titulo">Exemplo de Categoria</div>
 
             <article class="item-card">
-                <img src="https://placehold.co/150x150/orange/white?text=Pastel" class="item-foto">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
-                    <div class="item-nome">Frango com Catupiry</div>
-                    <div class="item-desc">Frango, catupiry, molho especial</div>
-                    <div class="item-preco">R$ 15,00</div>
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
                 </div>
             </article>
 
             <article class="item-card">
-                <img src="https://placehold.co/150x150/orange/white?text=Pastel" class="item-foto">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
-                    <div class="item-nome">Frango com cheddar</div>
-                    <div class="item-desc">Frango, cheddar, molho especial</div>
-                    <div class="item-preco">R$ 25,00</div>
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
                 </div>
             </article>
 
-            <div class="categoria-titulo">🍕 Pizza</div>
+            <div class="categoria-titulo">Exemplo de Categoria</div>
 
             <article class="item-card">
-                <img src="https://placehold.co/150x150/red/white?text=Pizza" class="item-foto">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
                 <div class="item-info">
-                    <div class="item-nome">Pizza Quatro Queijos</div>
-                    <div class="item-desc">Queijo, Cheddar, Catupiry, molho especial</div>
-                    <div class="item-preco">R$ 35,00</div>
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
+                <div class="item-info">
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
+                </div>
+            </article>
+
+<div class="categoria-titulo"> Milkshake</div>
+             <article class="item-card">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
+                <div class="item-info">
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
+                </div>
+            </article>
+
+            <article class="item-card">
+                <img src="https://placehold.co/150x150/red/white?text=Exemplo" class="item-foto">
+                <div class="item-info">
+                    <div class="item-nome">exemplo do produto</div>
+                    <div class="item-desc">Exemplo de descrição do produto.</div>
+                    <div class="item-preco">R$ 99,99</div>
                 </div>
             </article>
 
